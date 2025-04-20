@@ -1,0 +1,243 @@
+/*styles.css assign 9*/
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+a {
+    color: #e6a563;
+}
+a:hover {
+    opacity: 0.8;
+}
+h2 {
+    text-align: center;
+}
+img {
+    width: 100%;
+}
+
+/**Header**/
+header {
+    background-color: #efefef;
+    padding: 1em 0;
+    position: relative;
+}
+
+header a {
+    text-decoration: none;
+    color: #000
+}
+header a:hover {
+    color: #e6a563;
+}
+header .container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header .container a:first-child {
+    width: 250px;
+    margin-right: auto;
+
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.button {
+    background-color: #e6a563;
+    border-radius: 10px;
+    padding: 0.7em 1.5em;
+    display: inline-block;
+}
+.button:hover {
+    background-color: #fff;
+}
+nav li {
+    margin: 0 1em;
+    position: relative;
+    padding: 20px 0;
+}
+
+nav li a {
+    display: block;
+    padding: 0.5em 0;
+}
+
+.sub-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    border-radius: 20px;
+    padding: 20px 20px 20px;
+    align-items: flex-start;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sub-menu li {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #efefef;
+    width: 100%;
+}
+
+.sub-menu li:last-child {
+    border-bottom: none;
+}
+
+.sub-menu li a {
+    padding: 0.7em 1.5em;
+    display: block;
+}
+
+nav li:hover > .sub-menu,
+nav li > .sub-menu:hover  {
+    display: flex;
+}
+
+/* Features Hover */
+.features-menu-item {
+    position: relative;
+}
+
+.features-sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    min-width: 150px;
+}
+
+.features-menu-item:hover .features-sub-menu {
+    display: block;
+}
+
+.features-sub-menu a {
+    display: block;
+    padding: 5px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.features-sub-menu a:hover {
+    color: #e6a563;
+}
+
+
+.navTogglerMenu, .navToggler {
+    display: none;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
+    header img {
+        width: 200px;
+    }
+    header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #efefef;
+        margin-top: 10px;
+        border-top: 1px solid #ddd;
+    }
+    header ul.active {
+        display: flex;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 90px;
+        background-color: #efefef;
+        border-top: 1px solid #fff;
+        display: none;
+    }
+    }
+    nav li {
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+        text-align: center;
+    }
+    header nav a {
+        display: inline-block;
+        width: 100%;
+    }
+    nav li:last-child {
+        border-bottom: none;
+        padding: 0;
+        width: 100%;
+    }
+    .navTogglerMenu {
+        display: block;
+        cursor: pointer;
+        position: relative;
+    }
+    .sub-menu {
+        position: relative;
+        border-radius: 0;
+        gap: 0;
+        padding: 0;
+        display: flex;
+    }
+    .sub-menu a {
+        padding: 15px;
+    }
+    .button {
+        width: 100%;
+        border-radius: 0;
+        padding: 20px;
+    }
+    .navTogglerMenu {
+        display: block;
+    }
+    .navTogglerMenu img {
+        width: 25px;
+    }
+    .menuClose {
+        display: none;
+    }
+    .navTogglerMenu.active .menuOpen {
+        display: none;
+    }
+    .navTogglerMenu.active .menuClose {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    header .logo-container {
+        margin-right: auto;
+    }
